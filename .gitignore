@@ -15,3 +15,6 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 .idea
+.idea/sonarlint
+.idea/sonarlint/issuestore
+.idea/sonarlint/issuestore/index.pb

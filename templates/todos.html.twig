@@ -2,12 +2,22 @@
 
 {% block title %}
 
-"Hello World"
+"Todos"
 
 {% endblock %}
 
 {% block body %}
 
-<h1>"Hello" {{ place }}</h1>
-
+<h1>Tasks</h1>
+    <ul class="list-group">
+    {% for todo in todos %}
+        <li class="list-group-item">
+        {% if todo.status == 1 %}
+            <span style="text-decoration:line-through">{{ todo.task }}</span>
+        {% else %}
+            <span>{{ todo.task }}</span>
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
 {% endblock %}

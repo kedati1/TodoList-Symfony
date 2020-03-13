@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}"Todos"{% endblock %}
+{% block body %}
+    <h1>Tasks</h1>
+    <ul class="list-group">
+        {% for todo in todos %}
+        <li class="list-group-item">
+            {% if todo.status == 1 %}
+                <span style="text-decoration: line-through">{{todo.task}}</span>
+            {% else %}
+                <span>{{ todo.task }}</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

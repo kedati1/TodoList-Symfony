@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<form action="/todos" method="post" class="form-group">
+
+    <input name="task" required placeholder="add a task" class="form-control"/>
+
+    <button class="btn btn-primary mt-1">Add Task</button>
+
+</form>
+
+{% endblock %}
